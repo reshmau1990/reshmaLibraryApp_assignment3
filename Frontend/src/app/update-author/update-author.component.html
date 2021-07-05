@@ -1,0 +1,27 @@
+<div class='card'>
+  <form #userform = "ngForm" (ngSubmit)="editAuthor()">
+<div class='card-header'>
+UPDATE AUTHOR DETAILS
+</div>
+<div class='card-body'>            
+<small><p class="text-danger">All fields should begin with Capital letter</p></small> 
+<div class="form-group">
+  <label>Author</label>
+  <input type="text" name="authorname" class="form-control" [(ngModel)]="authorItem.authorname" pattern="^[A-Z][A-Za-z\'\-]+([\ A-Za-z][A-Za-z\'\-]+)*" required/> <br>               
+</div>
+  
+  <div class="form-group">
+    <label>Description</label>
+    <input type="text" name="description" class="form-control" [(ngModel)]="authorItem.description" minlength="20" required/><br>
+    
+  </div>
+  <div class="form-group">
+    <label>Image</label>
+<input type="text" name="imageUrl" class="form-control" [(ngModel)]="authorItem.imageUrl" required/><br>
+
+  </div>
+  <button [disabled]="userform.form.invalid">Submit</button>
+                
+
+</div>
+</form>

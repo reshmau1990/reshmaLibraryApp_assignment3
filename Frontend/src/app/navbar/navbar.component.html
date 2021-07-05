@@ -1,0 +1,15 @@
+<nav *ngIf="nav.visible" class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+      <ul class="navbar-nav navbar-right">
+
+          <a class="nav-link"  routerLink="/books"  routerLinkActive="active">Books</a>
+          <a class="nav-link" routerLink="/authors"  routerLinkActive="active">Authors</a>
+          <a class="nav-link" routerLink="/add" *ngIf="_auth.loggedIn()" routerLinkActive="active">Add Book</a>
+          <a class="nav-link" routerLink="/addauthor" *ngIf="_auth.loggedIn()" routerLinkActive="active">Add Author</a>
+          <a class="nav-link" style="cursor:pointer" (click)="logoutUser()">Logout</a>
+      </ul>
+    </div>
+  </nav> 

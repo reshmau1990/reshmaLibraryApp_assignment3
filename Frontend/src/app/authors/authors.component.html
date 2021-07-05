@@ -1,0 +1,36 @@
+<div class='card'>
+    <div class='card-header'>
+     <h1><b>{{pageTitle}}</b></h1>
+    </div>
+    
+    <div class='card-body'>            
+      <div class='table-responsive'>
+        <table class='table'
+              *ngIf = 'authors && authors.length'>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Author</th>
+            </tr>
+           
+          </thead>
+          <tbody>  
+              <tr *ngFor='let author of authors'>
+                <td><img
+                  [src] = 'author.imageUrl' 
+                  [title] = 'author.authorname'
+                  [style.width.px] = 'imageWidth' 
+                  [style.margin.px] = 'imageMargin'></td>
+                  <td>{{ author.authorname }}</td>
+                  <td>
+                    <button class="btn btn-warning" style="cursor:pointer" (click)="getauthor(author)" style="margin-left: 20px;">Read More</button> 
+                    <button class="btn btn-warning" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="editauthor(author)" style="margin-left: 20px;">Update</button>&nbsp; &nbsp;
+                    <button class="btn btn-danger" style="cursor:pointer" *ngIf="_auth.loggedIn()"(click)="deleteauthor(author)"> Delete</button>
+                  </td>
+                </tr>              
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,66 @@
+<div id="masthead">  
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+               <h1>{{pageTitle}}
+                 <p class="lead"></p>
+               </h1>
+            </div>
+        <div class="col-md-5">
+    <div class="well well-lg"> 
+
+        <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+    
+  
+  
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">         
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="row">    
+                       <br>
+                        <div class="col-md-2 col-sm-3 text-center">
+                            <img
+                            [src] = 'book.imageUrl' 
+                            [title] = 'book.title'
+                            [style.width.px] = 'imageWidth' 
+                            [style.margin.px] = 'imageMargin'>
+                        </div>
+                        <div class="col-md-10 col-sm-9">
+                           <h3>{{book.title}}</h3> <br>
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <h4><span class="label label-default">{{book.author}}</span></h4><h4> <br>
+                                    <small style="text-align: justify; text-justify: inter-word; font-family:courier,'new courier';" class="text-muted">{{book.description}}</small>
+                                    </h4>
+                                </div>
+                                           <br><br>
+                            </div>
+                        </div>
+                        <hr>     
+                    </div>
+                </div>
+            </div><!--/col-12-->
+        </div>
+    </div>
